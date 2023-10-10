@@ -3,12 +3,10 @@
 #include <locale.h>
 using namespace std;
 
-
 string login;
 string password;
 string logreg;
 string passreg;
-
 int choise;
 
 void saveDataToFile(string login, string password)
@@ -64,9 +62,9 @@ int main(int argc, char* argv[])
         saveDataToFile(logreg, passreg);
     }
 
-    if (choise == 1)
+    if (choise == 1) // Проверяем данные пользователя
     {
-        // Проверяем данные пользователя
+        
         string savedLogin, savedPassword;
         if (readDataFromFile(savedLogin, savedPassword) && login == savedLogin && password == savedPassword)
         {
